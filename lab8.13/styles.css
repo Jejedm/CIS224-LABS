@@ -1,0 +1,35 @@
+body {
+   font-family: Arial;
+}
+
+h1 {
+   text-align: center;
+}
+
+a {
+   font-size: 18px;
+}
+
+form > div {
+   padding-bottom: 6px;
+}
+
+form > div > label {
+   display: inline-block;
+   width: 120px;
+}
+
+#drink-size {
+   display: inline-block;
+   width: 300px;
+}
+
+label[for="drink-size"] {
+   vertical-align: top;
+}
+
+select {
+   width: 150px;
+   margin: 8px;
+   padding: 8px;
+}

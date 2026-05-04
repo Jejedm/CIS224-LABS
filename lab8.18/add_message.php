@@ -1,0 +1,22 @@
+<?php 
+
+if (!empty($_POST["text"]) && !empty($_POST["name"])) {
+
+   // Get values submitted from form in index.php
+   $text = trim($_POST["text"]);
+   $name = trim($_POST["name"]);
+
+   // Truncate strings that are too long
+   $text = mb_strimwidth($text, 0, 100, "...");
+   $name = mb_strimwidth($name, 0, 30);
+
+require_once "./db/Database.php";
+$db = new Database();
+$db->addMessage($text, $name);
+
+}
+
+// Redirect the browser to index.php
+header("Location: index.php");
+
+?>
